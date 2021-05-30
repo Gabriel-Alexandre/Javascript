@@ -4,7 +4,8 @@ const uri = 'https://api.github.com/search/users?q=ufpb';
 
 async function getRepositorios (url) {
     const result = (await axios.get(url)).data;
-    return result;
+    //console.log(result)
+    return result.items;
 }
 
 getRepositorios(uri).then(v => console.log(v));
